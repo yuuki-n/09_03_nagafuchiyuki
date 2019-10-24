@@ -71,7 +71,9 @@ if ($status == false) {
     // $view .= '<td>' . $result['url']  . '</td>';
 
     // 書籍名にリンクがかかるが、URLに遷移しない
-    $view .= '<td>' . ' <a href=$result["url"]> ' . $result["name"] . '</a>' . '</td>';
+    // $view .= '<td>' . ' <a href=$result["url"]> ' . $result["name"] . '</a>' . '</td>';
+    // 変数は..で囲む、変数のあとの文字列は''で囲む
+    $view .= '<td><a href=' . $result['url'] . '>' . $result['name'] . '</a></td>';
     $view .= '<td>' . $result['comment']  . '</td>';
     $view .= '</tr>';
     $view .= '</tbody>';
